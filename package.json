@@ -1,7 +1,7 @@
 {
-  "name": "MakefileExtension",
+  "name": "makefileextension",
   "displayName": "MakefileExtension",
-  "description": "VS-Code extension for easily creating makefiles for projects.",
+  "description": "builds make files",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.82.0"
@@ -14,7 +14,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "MakefileExtension.helloWorld",
+        "command": "makefileextension.helloWorld",
         "title": "Hello World"
       }
     ]
