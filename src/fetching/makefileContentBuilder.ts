@@ -21,13 +21,17 @@ export async function makefileBuilder (filePath: string, files : any): Promise <
         var picked = pickFile;
     }
 
-    //for (var i = 0; i < files.length; i++) {
-        fs.writeFileSync(filePath, functionName + ': '+ picked +"\n" + "\t g++ " + picked.replace(".cpp",".o") + " -o " + functionName + " \n", 
+    fs.writeFileSync(
+        filePath, 
+        functionName + ': '+ picked +"\n" + "\t g++ " + picked.replace(".cpp",".o") + " -o " + functionName + " \n", 
         {
-            encoding: "utf8",
-            flag: "a+",
-            mode: 0o666
-          });
-    //}
-    
+        encoding: "utf8",
+        flag: "a+",
+        mode: 0o666
+        }
+    );
+
+    //Talks to the terminal and executes but need to edit the makefile content to be correct for no error, plus add error handling
+    const terminal = vscode.window.createTerminal(`Ext Terminal Make`);
+    terminal.sendText("make");
 }
