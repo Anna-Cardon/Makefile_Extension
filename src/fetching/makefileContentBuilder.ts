@@ -5,7 +5,6 @@ import path = require('path');
 //TODO: Think about the vscode.uri instead of a string
 export async function makefileBuilder (filePath: string, files : any): Promise <any>{
 
-    //TODO: Get the function name from command input
     const functionName = await vscode.window.showInputBox({prompt: "Input the function name"});
     //If the user escapes or enters an empty string in the inputbox, then exit the function
     if(functionName === undefined || functionName === ''){

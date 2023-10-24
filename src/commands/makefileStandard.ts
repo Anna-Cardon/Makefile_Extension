@@ -18,7 +18,6 @@ export async function standardMF (editor: vscode.TextEditor | undefined): Promis
         } else {
             var files = await findFiles();
             // Create a new file with some initial content
-            //TODO: Create function that fills in makefile
             await makefileBuilder(filePath, files);
             // Open the new file in the editor
             vscode.workspace.openTextDocument(filePath).then(doc => {
