@@ -22,7 +22,7 @@ export async function makefileBuilder (filePath: string, files : any): Promise <
 
     fs.writeFileSync(
         filePath, 
-        functionName + ': '+ picked +"\n" + "\t g++ " + picked.replace(".cpp",".o") + " -o " + functionName + " \n", 
+        functionName + ': '+ picked +"\n" + "\t gcc " + picked + " -o " + functionName + " \n", 
         {
         encoding: "utf8",
         flag: "a+",
