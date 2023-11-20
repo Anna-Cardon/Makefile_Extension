@@ -1,8 +1,9 @@
 {
   "name": "makefileextension",
   "displayName": "MakefileExtension",
-  "description": "builds make files",
-  "version": "0.0.1",
+  "description": "builds makefiles",
+  "publisher": "Annastacia Cardon",  
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.82.0"
   },
