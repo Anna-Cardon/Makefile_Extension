@@ -1,51 +1,52 @@
-# makefileextension README
+# Makefile Extension
 
-This is the README for your extension "makefileextension". After writing up a brief description, we recommend including the following sections.
+## Overview
+
+This Makefile Extension for Visual Studio Code simplifies the process of creating and managing Makefiles for C++ projects. It allows you to generate a Makefile for a specified C++ file, and provides options for handling existing Makefiles.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Automatic Makefile Generation:** Quickly generate a Makefile for a specified C++ file within your project.
 
-For example if there is an image subfolder under your extension project workspace:
+- **Makefile Management:**
+  - If a Makefile already exists in the project directory, the extension prompts the user to choose between running the current Makefile or creating a new one.
+  - If the user chooses to create a new Makefile, they are prompted to specify a function name and the file to link.
 
-\!\[feature X\]\(images/feature-x.png\)
+## Prerequisites
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- Visual Studio Code installed.
+- C/C++ extension for Visual Studio Code installed.
 
-## Requirements
+## Installation
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. Clone or download this repository to your local machine.
 
-## Extension Settings
+2. Open Visual Studio Code and navigate to the Extensions view (`Ctrl+Shift+X`).
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+3. Click on the "..." icon and select "Install from VSIX...".
 
-For example:
+4. Choose the downloaded VSIX file from the cloned/downloaded repository.
 
-This extension contributes the following settings:
+5. Reload Visual Studio Code to activate the extension.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Usage
 
-## Known Issues
+1. Open a C++ file in Visual Studio Code.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+2. Access the editor Run button, open its menu and select "Compile/Run Makefile"
 
-## Release Notes
+![image](<ReadMe_Files/location.png>)
 
-Users appreciate release notes as you update your extension.
+3. Follow the prompts:
+   - If a Makefile exists:
+     - Choose to run the current Makefile or create a new one.
+     - If creating a new Makefile, specify a function name and the file to link in command pallete.
 
-### 1.0.0
+4. The extension will generate the Makefile for you in the project directory.
 
-Initial release of ...
+## Commands
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+- **Makefile Extension: Create Makefile:** Trigger the process of creating a Makefile for the specified C++ file.
 
 ---
 
