@@ -23,7 +23,7 @@ export async function makefileBuilder (filePath: string, files : any): Promise <
     fs.writeFileSync(
         filePath, 
         //functionName + ': '+ picked +"\n" + "\t gcc " + picked + " -o " + functionName + " \n",
-        functionName + ': '+ picked.replace(".cpp", ".o") +"\n" + "\t gcc " + picked.replace(".cpp",".o") + " -o " + functionName + " \n"+ picked.replace(".cpp",".o") + ': '+ picked +"\n" + "\t gcc " + picked + " -c " + " \n" + "clean: \n" + "\t rm -f *.o ",  
+        functionName + ': '+ picked.replace(".cpp", ".o") +"\n" + "\t g++ " + picked.replace(".cpp",".o") + " -o " + functionName + " \n"+ picked.replace(".cpp",".o") + ': '+ picked +"\n" + "\t g++ " + picked + " -c " + " \n" + "clean: \n" + "\t rm -f *.o ",  
         {
         encoding: "utf8",
         flag: "a+",
