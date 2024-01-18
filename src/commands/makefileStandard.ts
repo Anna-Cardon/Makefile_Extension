@@ -25,6 +25,16 @@ export async function standardMF (editor: vscode.TextEditor | undefined): Promis
                 if (selection === runCurrentMakefileButton) {
                     terminal.sendText("make clean");
                     terminal.sendText("make");
+                    fs.readFile(filePath, 'utf8', (err: any, data: string) => {
+                        if (err) {
+                            console.error(err);
+                            return;
+                        }
+                    
+                        const firstLine = data.split(':')[0];
+                        console.log('First line:', firstLine);
+                        terminal.sendText("./" + firstLine);
+                    });
                 } else {
                     //delete old Makefile
                     await fs.unlinkSync(filePath);
