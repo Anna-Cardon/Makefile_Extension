@@ -51,7 +51,7 @@ export async function makefileBuilder (filePath: string, files : any): Promise <
     const terminal = vscode.window.createTerminal(`Ext Terminal Make`);
     terminal.sendText("make clean");
     terminal.sendText("make");
-
+    terminal.sendText("./" + functionName);
     // Reset objectFileCreateArray to have no values
     objectFileCreateArray.length = 0;
 }
